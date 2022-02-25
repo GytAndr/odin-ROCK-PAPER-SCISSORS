@@ -20,38 +20,44 @@ function playRound (computer, player) {
     switch (player) {
         case "rock":
             if (computer == "rock") {
-                console.log(`Draw! ${computer} eaquals ${player}.`);
+                return `Draw! ${computer} eaquals ${player}.`;
             } else if (computer == "paper") {
-                console.log(`You Lose! ${computer} beats ${player}.`);
+                return `You Lose! ${computer} beats ${player}.`;
             } else {
-                console.log(`You Win! ${player} beats ${computer}.`);
+                return `You Win! ${player} beats ${computer}.`;
             }
             break;
         case "paper":
             if (computer == "paper") {
-                console.log(`Draw! ${computer} eaquals ${player}.`);
+                return `Draw! ${computer} eaquals ${player}.`;
             } else if (computer == "scissors") {
-                console.log(`You Lose! ${computer} beats ${player}.`);
+                return `You Lose! ${computer} beats ${player}.`;
             } else {
-                console.log(`You Win! ${player} beats ${computer}.`);
+                return `You Win! ${player} beats ${computer}.`;
             }
             break;
         case "scissors":
             if (computer == "scissors") {
-                console.log(`Draw! ${computer} eaquals ${player}.`);
+                return `Draw! ${computer} eaquals ${player}.`;
             } else if (computer == "rock") {
-                console.log(`You Lose! ${computer} beats ${player}.`);
+                return `You Lose! ${computer} beats ${player}.`;
             } else {
-                console.log(`You Win! ${player} beats ${computer}.`);
+                return `You Win! ${player} beats ${computer}.`;
             }
             break;
         default:
-            console.log("Error!")
+            return "Error!";
             break;
     }
 }
-const computer = computerPlay();
-const player = "rock";
 
-//call function
-playRound(computer, player);
+//game function to loop 5 times. with each loop reask new variables
+function game() {
+    for (let index = 0; index < 5; index++) {
+        const computer = computerPlay();
+        const player = window.prompt("Enter your selection:");
+        console.log(playRound(computer, player));
+    }
+}
+
+game();
