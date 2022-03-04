@@ -2,7 +2,7 @@ header {
   padding-top: 30px;
   text-align: center;
   border-bottom: 5px black solid;
-  background: hsl(0, 0%, 60%);
+  background: hsl(0, 0%, 50%);
 }
 
 .container {
@@ -20,6 +20,10 @@ header {
   font-weight: bold;
   cursor: pointer;
 }
+.button:hover {
+  transform: scale(1.1);
+  background: hsl(0, 0%, 40%);
+}
 .name {
   font-size: xx-large;
   text-align: center;
@@ -30,4 +34,28 @@ header {
   text-align: center;
   padding: 30px;
   font-size: larger;
+}
+body {
+  background: hsl(0, 0%, 70%);
+  margin: 0;
+}
+#computerScore {
+  text-align: center;
+  padding-top: 5px;
+}
+h3 {
+  margin: 0;
+  padding: 10px;
+}
+#scoreCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 0%, 70%);
+}
+#compSelection {
+  font-size: xx-large;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
