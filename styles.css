@@ -1,0 +1,33 @@
+header {
+  padding-top: 30px;
+  text-align: center;
+  border-bottom: 5px black solid;
+  background: hsl(0, 0%, 60%);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  height: 50vh;
+  background: hsl(0, 0%, 70%);
+}
+.button {
+  width: 25vw;
+  height: 100px;
+  background: grey;
+  font-weight: bold;
+  cursor: pointer;
+}
+.name {
+  font-size: xx-large;
+  text-align: center;
+  margin-top: 30px;
+}
+#score {
+  font-weight: bold;
+  text-align: center;
+  padding: 30px;
+  font-size: larger;
+}

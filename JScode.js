@@ -52,12 +52,20 @@ function playRound (computer, player) {
 }
 
 //game function to loop 5 times. with each loop reask new variables
-function game() {
+function game(playerSelection) {
     for (let index = 0; index < 5; index++) {
         const computer = computerPlay();
-        const player = window.prompt("Enter your selection:");
+        const player = playerSelection;
         console.log(playRound(computer, player));
     }
 }
+let rock = document.getElementById('rock');
+rock.addEventListener('click', game("rock"));
 
+let paper = document.getElementById('paper');
+paper.addEventListener('click', game("paper"));
+
+let scissors = document.getElementById('scissors');
+scissors.addEventListener('click', game("scissors"));
+console.log(playerSelection);
 game();
